@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>A1 Grammar: Present Simple vs Present Continuous | Rules + 30 Sentences</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eef5f0;
+            font-family: 'Segoe UI', 'Inter', Roboto, system-ui, sans-serif;
+            padding: 40px 24px;
+            color: #1a2e1a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* header & titles */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #1f6e3a, #3aa85c);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .sub {
+            font-size: 1.05rem;
+            color: #2b532b;
+            background: #e2f0df;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+        }
+
+        /* ========= REDESIGNED RULES SECTION (with structures) ========= */
+        .rules-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .rule-card {
+            background: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 20, 0, 0.05);
+            border: 1px solid #d4e8cf;
+            transition: transform 0.1s;
+        }
+
+        .rule-header {
+            background: #edf7e7;
+            padding: 1rem 1.5rem;
+            border-bottom: 3px solid #5cb85c;
+        }
+
+        .rule-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f5430;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rule-body {
+            padding: 1.4rem 1.6rem;
+        }
+
+        .structure-box {
+            background: #f9faf5;
+            border-radius: 1.2rem;
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 1rem;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            border-left: 4px solid #f0b27a;
+        }
+
+        .structure-title {
+            font-weight: 700;
+            color: #2c6e2c;
+            margin: 0.8rem 0 0.4rem 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .example-row {
+            background: #fffef7;
+            padding: 8px 12px;
+            border-radius: 14px;
+            margin: 10px 0;
+            font-size: 0.95rem;
+        }
+
+        .badge-mini {
+            background: #cfe3c9;
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .divider-light {
+            height: 1px;
+            background: #d9e8d4;
+            margin: 14px 0;
+        }
+
+        .tense-badge {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0 25px;
+        }
+
+        .badge {
+            background: white;
+            padding: 8px 18px;
+            border-radius: 60px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid #3b9e5c;
+        }
+
+        /* sentence cards */
+        .sentences-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .sentence-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 20px 24px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid #d4e8cf;
+        }
+
+        .russian-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            background: #fff8ef;
+            padding: 14px 18px;
+            border-radius: 24px;
+            margin-bottom: 16px;
+            font-family: 'Courier New', 'Segoe UI', monospace;
+            letter-spacing: 0.3px;
+            color: #2c3e2a;
+            border-left: 6px solid #f0b27a;
+        }
+
+        .btn-reveal {
+            background: #2a7f49;
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 24px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-reveal:hover {
+            background: #1f653b;
+            transform: scale(0.97);
+        }
+
+        .translation-box {
+            margin-top: 16px;
+            padding: 14px 20px;
+            background: #edf7e8;
+            border-radius: 22px;
+            color: #1a4a1a;
+            font-size: 1.05rem;
+            border-left: 5px solid #5cb85c;
+            display: none;
+            line-height: 1.4;
+        }
+
+        .translation-box.show {
+            display: block;
+        }
+
+        .sentence-number {
+            display: inline-block;
+            background: #cfe3c9;
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #2c5e2a;
+            margin-right: 12px;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #4e724a;
+            background: #fcf9e3;
+            padding: 14px;
+            border-radius: 60px;
+        }
+
+        hr {
+            margin: 16px 0;
+            border: 1px solid #cce5c4;
+        }
+
+        @media (max-width: 750px) {
+            body {
+                padding: 20px 16px;
+            }
+            .russian-text {
+                font-size: 1.1rem;
+                padding: 12px 14px;
+            }
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📚 Present Simple vs Present Continuous</h1>
+        <div class="sub">✅ positive · ❌ negative · ❓ interrogative + structures & rules</div>
+        <div class="tense-badge">
+            <span class="badge">🔹 Present Simple: facts / habits / routines</span>
+            <span class="badge">⏳ Present Continuous: now / around now / temporary</span>
+        </div>
+    </div>
+
+    <!-- ============ RULES WITH STRUCTURES (REDESIGNED) ============= -->
+    <div class="rules-section">
+        <div class="rules-grid">
+            <!-- PRESENT SIMPLE CARD -->
+            <div class="rule-card">
+                <div class="rule-header">
+                    <h3>📘 Present Simple</h3>
+                </div>
+                <div class="rule-body">
+                    <div class="structure-box">
+                        <div class="structure-title">➕ POSITIVE</div>
+                        <div>I / You / We / They → <strong>verb</strong></div>
+                        <div>He / She / It → <strong>verb + -s / -es</strong></div>
+                        <div class="example-row">✨ <em>I walk my dog. / She feeds the cat. / He plays with a parrot.</em></div>
+                        
+                        <div class="structure-title">➖ NEGATIVE</div>
+                        <div>I / You / We / They → <strong>do not (don't) + verb</strong></div>
+                        <div>He / She / It → <strong>does not (doesn't) + verb</strong></div>
+                        <div class="example-row">🚫 <em>They don't like snakes. / He doesn't clean the cage.</em></div>
+                        
+                        <div class="structure-title">❓ QUESTION</div>
+                        <div><strong>Do / Does</strong> + subject + <strong>verb</strong>?</div>
+                        <div class="example-row">❓ <em>Do you have a rabbit? / Does your parrot talk?</em></div>
+                    </div>
+                    <div class="divider-light"></div>
+                    <div><span class="badge-mini">📆 when?</span> every day, usually, always, sometimes, on Mondays, never</div>
+                    <div style="margin-top: 8px;"><span class="badge-mini">💡 tip</span> Stative verbs (love, hate, know, understand) → only Present Simple</div>
+                </div>
+            </div>
+
+            <!-- PRESENT CONTINUOUS CARD -->
+            <div class="rule-card">
+                <div class="rule-header">
+                    <h3>⏳ Present Continuous</h3>
+                </div>
+                <div class="rule-body">
+                    <div class="structure-box">
+                        <div class="structure-title">➕ POSITIVE</div>
+                        <div><strong>am / is / are + verb-ing</strong></div>
+                        <div class="example-row">🐕 <em>I am walking the dog now. / She is feeding the rabbit.</em></div>
+                        
+                        <div class="structure-title">➖ NEGATIVE</div>
+                        <div><strong>am not / isn't / aren't + verb-ing</strong></div>
+                        <div class="example-row">😴 <em>The cat isn't sleeping right now. / We aren't playing.</em></div>
+                        
+                        <div class="structure-title">❓ QUESTION</div>
+                        <div><strong>Am / Is / Are</strong> + subject + <strong>verb-ing</strong>?</div>
+                        <div class="example-row">🐹 <em>Is your hamster running? / Are they barking?</em></div>
+                    </div>
+                    <div class="divider-light"></div>
+                    <div><span class="badge-mini">⏰ now markers</span> now, right now, at the moment, today, this week, Look! / Listen!</div>
+                    <div style="margin-top: 8px;"><span class="badge-mini">🎯 special use</span> temporary actions, changing situations, annoying habits (with "always")</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- short comparison table -->
+        <div style="background: #fef8e7; border-radius: 1.5rem; padding: 1rem 1.5rem; border: 1px solid #f5e2b0; margin-top: 0.5rem;">
+            <p style="font-weight: 600;">🔍 <strong>Compare:</strong> <em>I work</em> (every day)  vs  <em>I am working</em> (right now). &nbsp;|&nbsp; 
+            <em>She doesn't eat meat</em> (fact)  vs  <em>She isn't eating meat today</em> (temporary).</p>
+        </div>
+    </div>
+
+    <!-- 30 SENTENCES SECTION -->
+    <div style="margin-top: 1.8rem;">
+        <h2 style="font-size: 1.6rem; margin-bottom: 1rem; color: #2c6e3a;">✅ 30 Russian Sentences — practice positive, negative, questions</h2>
+        <p style="margin-bottom: 1.2rem;">👇 Click any button to reveal the English translation. Read the Russian sentence and try to say it in English first!</p>
+        <div class="sentences-grid" id="sentences-list"></div>
+    </div>
+
+    <div class="footer-note">
+        💡 Tip: Cover the translation, speak aloud, then check yourself. Repeat to build fluency!
+    </div>
+</div>
+
+<script>
+    // 30 SENTENCES — mixed positive, negative, interrogative
+    // Present Simple & Present Continuous context (A1 level) – includes pets/animals theme
+    const sentences = [
+        // POSITIVE (Present Simple & Continuous)
+        { ru: "Я люблю кошек и собак.", en: "I love cats and dogs." },
+        { ru: "Она каждый день кормит своего хомяка.", en: "She feeds her hamster every day." },
+        { ru: "Мы сейчас играем с нашей собакой.", en: "We are playing with our dog now." },
+        { ru: "Мой брат обычно ходит в парк с попугаем.", en: "My brother usually walks to the park with his parrot." },
+        { ru: "Сейчас я читаю книгу о диких животных.", en: "I am reading a book about wild animals now." },
+        { ru: "Они часто берут свою кошку к ветеринару.", en: "They often take their cat to the vet." },
+        { ru: "Посмотри! Кот спит на диване.", en: "Look! The cat is sleeping on the sofa." },
+        { ru: "Моя сестра имеет двух морских свинок.", en: "My sister has two guinea pigs." },
+        // NEGATIVE
+        { ru: "Я не держу змей как домашних питомцев.", en: "I don't keep snakes as pets." },
+        { ru: "Он не любит сухой корм для собак.", en: "He doesn't like dry dog food." },
+        { ru: "Мы сейчас не моем нашу черепаху.", en: "We are not washing our turtle now." },
+        { ru: "Мой папа не работает в зоомагазине.", en: "My dad doesn't work in a pet shop." },
+        { ru: "Эти кошки не спят на улице сегодня.", en: "These cats are not sleeping outside today." },
+        { ru: "Они не дают своей собаке сладости.", en: "They don't give sweets to their dog." },
+        { ru: "Сейчас я не гуляю с питомцем, я занят.", en: "I am not walking the pet now, I am busy." },
+        { ru: "Мой сосед не имеет аквариумных рыбок.", en: "My neighbour doesn't have aquarium fish." },
+        // INTERROGATIVE (questions)
+        { ru: "Ты кормишь рыбок каждое утро?", en: "Do you feed the fish every morning?" },
+        { ru: "Что сейчас ест твой питомец?", en: "What is your pet eating right now?" },
+        { ru: "Они часто играют со своей кошкой?", en: "Do they often play with their cat?" },
+        { ru: "Почему ты смеёшься? Собака танцует?", en: "Why are you laughing? Is the dog dancing?" },
+        { ru: "Твой попугай говорит английские слова?", en: "Does your parrot say English words?" },
+        { ru: "Мы сейчас правильно ухаживаем за кроликом?", en: "Are we taking care of the rabbit correctly now?" },
+        { ru: "Ты видишь ту лошадь в поле?", en: "Do you see that horse in the field?" },
+        { ru: "Почему щенок так громко лает сегодня?", en: "Why is the puppy barking so loudly today?" },
+        { ru: "Ваша семья держит домашних животных?", en: "Does your family keep pets?" },
+        { ru: "Я правильно кормлю хомяка?", en: "Am I feeding the hamster correctly?" },
+        { ru: "Они сейчас готовят ужин для своей собаки?", en: "Are they cooking dinner for their dog now?" },
+        { ru: "Ты часто моешь лапы своей кошке?", en: "Do you often wash your cat's paws?" },
+        { ru: "Обычно я просыпаюсь рано, но сегодня моя кошка спит до полудня.", en: "I usually wake up early, but today my cat is sleeping until noon." },
+        { ru: "Ты всегда покупаешь дорогой корм для своего питомца?", en: "Do you always buy expensive food for your pet?" }
+    ];
+
+    // Exactly 30 sentences verified
+    console.log("Total sentences loaded:", sentences.length); // 30
+
+    const container = document.getElementById('sentences-list');
+    
+    function buildSentenceCards() {
+        container.innerHTML = '';
+        sentences.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.className = 'sentence-card';
+            
+            // Russian text with number
+            const russianDiv = document.createElement('div');
+            russianDiv.className = 'russian-text';
+            const numberSpan = document.createElement('span');
+            numberSpan.className = 'sentence-number';
+            numberSpan.innerText = `${index+1}`;
+            russianDiv.appendChild(numberSpan);
+            russianDiv.appendChild(document.createTextNode(` ${item.ru}`));
+            
+            // Button
+            const button = document.createElement('button');
+            button.className = 'btn-reveal';
+            button.innerHTML = '🔎 Reveal translation';
+            
+            // Translation block
+            const transBlock = document.createElement('div');
+            transBlock.className = 'translation-box';
+            transBlock.innerText = item.en;
+            
+            // Toggle logic
+            button.addEventListener('click', () => {
+                const isVisible = transBlock.classList.contains('show');
+                if (!isVisible) {
+                    transBlock.classList.add('show');
+                    button.innerHTML = '🙈 Hide translation';
+                } else {
+                    transBlock.classList.remove('show');
+                    button.innerHTML = '🔎 Reveal translation';
+                }
+            });
+            
+            card.appendChild(russianDiv);
+            card.appendChild(button);
+            card.appendChild(transBlock);
+            container.appendChild(card);
+        });
+    }
+    
+    buildSentenceCards();
+</script>
+</body>
+</html>
